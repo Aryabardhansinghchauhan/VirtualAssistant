@@ -22,6 +22,12 @@ app.use(cookieParser())
 app.use("/api/auth",authRouter)
 app.use("/api/user",userRouter)
 
+app.get("/", (req, res) => {
+    res.json({
+        message: "Virtual Assistant Backend is running"
+    })
+})
+
 
 
 app.listen(port, () => {
